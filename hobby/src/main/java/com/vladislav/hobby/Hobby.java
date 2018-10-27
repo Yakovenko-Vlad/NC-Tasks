@@ -1,6 +1,4 @@
-package com.yakovenko.vladislav;
-
-import java.util.Arrays;
+package com.vladislav.hobby;
 
 public class Hobby {
     private boolean happyWithYourHobby;

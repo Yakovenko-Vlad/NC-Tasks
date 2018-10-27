@@ -1,4 +1,4 @@
-package com.yakovenko.vladislav;
+package com.vladislav.hobby;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -7,7 +7,7 @@ public class Test {
 
     private static Logger logger = Logger.getLogger(Test.class.getName());
     public static void main(String[] args) {
-        PropertyConfigurator.configure("resources/log4j.properties");
+        PropertyConfigurator.configure("src/main/resources/log4j.properties");
 
         Hobby hobbyFlowers = new Hobby(new char[]{'f', 'l', 'o', 'w', 'e', 'r', 's'}, (byte) 3);
         Hobby hobbyCollectingStamps = new Hobby(new char[]{'s', 't', 'a', 'm', 'p', 's'}, (byte) 20,
