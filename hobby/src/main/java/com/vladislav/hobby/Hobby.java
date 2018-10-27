@@ -1,44 +1,37 @@
 package com.vladislav.hobby;
 
-public class Hobby {
+public abstract class Hobby {
     private boolean happyWithYourHobby;
     private byte years;
     private short months;
     private char[] name;
     private int days;
-    private long createdThings;
+    private long caughtFish;
     private float hours;
     private double spentDollars;
 
-    public Hobby() {}
+    protected Hobby() {
+    }
 
-    public Hobby(char[] name, byte years) {
+    protected Hobby(char[] name, byte years) {
         this.name = name;
         this.years = years;
     }
 
-    public Hobby(char[] name, byte years, double spentDollars, boolean happyWithYourHobby) {
+    protected Hobby(char[] name, byte years, double spentDollars, boolean happyWithYourHobby) {
         this.name = name;
         this.years = years;
         this.spentDollars = spentDollars;
         this.happyWithYourHobby = happyWithYourHobby;
     }
 
-    public Hobby(char[] name, byte years, long createdThings) {
+    protected Hobby(char[] name, byte years, long caughtFish) {
         this.name = name;
         this.years = years;
-        this.createdThings = createdThings;
+        this.caughtFish = caughtFish;
     }
 
-    @Override
-    public String toString() {
-        return "Your hobby is " + String.valueOf(name) + ", you " +
-                (happyWithYourHobby ? "" : "do not ")
-                + "like it," + " you have been doing it for "+ years +" years, " +
-                + months + " months, " + days + " days" + " and " + hours + " hours" +
-                ", you have created " + createdThings + " things and have spent "
-                + spentDollars + " dollars";
-    }
+    public abstract String tellAboutHobby();
 
     public boolean isHappyWithYourHobby() {
         return happyWithYourHobby;
@@ -80,12 +73,12 @@ public class Hobby {
         this.days = days;
     }
 
-    public long getCreatedThings() {
-        return createdThings;
+    public long getCaughtFish() {
+        return caughtFish;
     }
 
-    public void setCreatedThings(long createdThings) {
-        this.createdThings = createdThings;
+    public void setCaughtFish(long caughtFish) {
+        this.caughtFish = caughtFish;
     }
 
     public float getHours() {
